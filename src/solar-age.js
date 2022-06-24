@@ -28,8 +28,10 @@ export class SolarAge{
   }
 
   timeLeft(lifespan) {
-    let timeleft = [];
-
+    let timeleft = [1, 0.24, 0.62, 1.88, 11.68];
+    for (let i = 0; i < timeleft.length; i++){
+      timeleft[i] = ((lifespan-this.EarthAge) / timeleft[i]).toFixed(2); 
+    }
     return timeleft;
   }
 

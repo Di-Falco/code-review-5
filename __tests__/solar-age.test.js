@@ -34,7 +34,7 @@ describe ('Solar Age', () => {
 
   test('should calculate the remaining lifespan on each planet in the corresponding year value', () => {
     const lifespan = 79;
-    expect(anthony.timeLeft(lifespan)).toEqual([56, 234, 90, 30, 5]);
+    expect(anthony.timeLeft(lifespan)).toEqual(['56.00', '233.33', '90.32', '29.79', '4.79']);
   });
 
 });
