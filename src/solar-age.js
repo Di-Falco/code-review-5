@@ -17,7 +17,8 @@ export class SolarAge{
   }
 
   marsYears() {
-
+    const marsYear = 1.88;
+    this.MarsAge = Math.floor(this.EarthAge / marsYear);
   }
 
 }
