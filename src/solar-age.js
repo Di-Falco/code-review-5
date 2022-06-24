@@ -11,7 +11,8 @@ export class SolarAge{
   }
 
   venusYears() {
-
+    const venusYear = 0.62;
+    this.VenusAge = Math.floor(this.EarthAge / venusYear);
   }
 
 }
