@@ -6,7 +6,7 @@ describe ('Solar Age', () => {
   let scruffy;
 
   beforeEach(() => {
-    anthony = new SolarAge(23);
+    anthony = new SolarAge(23, 924825600000);
   });
 
   test('should correctly store and return the user\'s age in earth years', () => {
@@ -49,7 +49,7 @@ describe ('Solar Age', () => {
     anthony.venusYears();
     anthony.marsYears();
     anthony.jupiterYears();
-    expect(anthony.nextBirthday()).toEqual('Your next birthday is in 189 Earth days on Mercury!');
+    expect(anthony.nextBirthday()).toEqual('Your next birthday is in 70 Earth days on Mercury!');
   });
 
 });

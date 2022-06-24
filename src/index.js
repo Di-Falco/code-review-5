@@ -12,18 +12,18 @@ $(document).ready(function(){
     const today = new Date;
     const birthday = new Date($("#birthday").val());
     const age = Math.floor((today.getTime() - birthday.getTime())/(365*24*60*60*1000));
-    const user = new SolarAge(age);
+    const user = new SolarAge(age, birthday);
 
     user.mercuryYears();
     user.venusYears();
     user.marsYears();
     user.jupiterYears();
 
-    $("#mercury-age").text(`Mercury: ${user.MercuryAge}`);
-    $("#venus-age").text(`Venus: ${user.VenusAge}`);
-    $("#earth-age").text(`Earth: ${user.EarthAge}`);
-    $("#mars-age").text(`Mars: ${user.MarsAge}`);
-    $("#jupiter-age").text(`Jupiter: ${user.JupiterAge}`);
+    $("#mercury-age").html(`Mercury: ${user.MercuryAge} mercurial years`);
+    $("#venus-age").html(`Venus: ${user.VenusAge} venusian years`);
+    $("#earth-age").html(`Earth: ${user.EarthAge} earth years`);
+    $("#mars-age").html(`Mars: ${user.MarsAge} martian years`);
+    $("#jupiter-age").html(`Jupiter: ${user.JupiterAge} jovian years`);
 
     const lifespan = 79;
     let timeleft = user.timeLeft(lifespan);
