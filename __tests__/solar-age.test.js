@@ -45,6 +45,10 @@ describe ('Solar Age', () => {
   });
 
   test('should return the number of days until the user\'s next birthday on any planet', () => {
+    anthony.mercuryYears();
+    anthony.venusYears();
+    anthony.marsYears();
+    anthony.jupiterYears();
     expect(anthony.nextBirthday()).toEqual('Your next birthday is in XXX days on XXX!');
   });
 
