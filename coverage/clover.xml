@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1656086419545" clover="3.2.0">
-  <project timestamp="1656086419545" name="All files">
-    <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5" elements="16" coveredelements="16" complexity="0" loc="11" ncloc="11" packages="1" files="1" classes="1"/>
+<coverage generated="1656086463302" clover="3.2.0">
+  <project timestamp="1656086463302" name="All files">
+    <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5" elements="18" coveredelements="18" complexity="0" loc="13" ncloc="13" packages="1" files="1" classes="1"/>
     <file name="solar-age.js" path="/Users/difalcoa/Desktop/epicodus/code-review-5/src/solar-age.js">
-      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
       <line num="3" count="5" type="stmt"/>
       <line num="4" count="5" type="stmt"/>
       <line num="5" count="5" type="stmt"/>
@@ -15,6 +15,8 @@
       <line num="17" count="1" type="stmt"/>
       <line num="21" count="1" type="stmt"/>
       <line num="22" count="1" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="27" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

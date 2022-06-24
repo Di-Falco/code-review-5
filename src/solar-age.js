@@ -23,7 +23,8 @@ export class SolarAge{
   }
 
   jupiterYears() {
-
+    const jupiterYear = 11.68;
+    this.JupiterAge = Math.floor(this.EarthAge / jupiterYear);
   }
 
 }
