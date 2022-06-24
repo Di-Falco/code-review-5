@@ -42,7 +42,19 @@ export class SolarAge{
   }
 
   nextBirthday() {
-
+    let planetDays = [this.MercuryAge, this.VenusAge, this.MarsAge, this.JupiterAge];
+    const planets = ["Mercury", "Venus", "Mars", "Jupiter"];
+    const yearConversion = [0.24, 0.62, 1.88, 11.68];
+    for (let i = 0; i < planetDays.length; i++) {
+      planetDays[i] = Math.floor((planetDays[i] * yearConversion[i] * 365) % 365);
+    }
+    let nextBirthday = `Your next birthday is in ${planetDays[0]} days on ${planets[0]}`;
+    for (let i = 1; i < planetDays.length; i++) {
+      if(planetDays[i] < planetDays[i-1]) {
+        nextBirthday = `Your next birthday is in ${planetDays[i]} days on ${planets[i]}!`;
+      }
+    }
+    return nextBirthday;
   }
 
 }

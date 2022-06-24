@@ -49,7 +49,7 @@ describe ('Solar Age', () => {
     anthony.venusYears();
     anthony.marsYears();
     anthony.jupiterYears();
-    expect(anthony.nextBirthday()).toEqual('Your next birthday is in XXX days on XXX!');
+    expect(anthony.nextBirthday()).toEqual('Your next birthday is in 204 days on Mars!');
   });
 
 });
