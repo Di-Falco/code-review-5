@@ -1,9 +1,10 @@
 export class SolarAge{
-  constructor(){
-    this.EarthYears = 0;
+  constructor(age){
+    this.EarthAge = age;
   }
 
   earthYears() {
-    return this.EarthYears;
+    return this.EarthAge;
   }
+
 }

@@ -5,12 +5,12 @@ describe ('Solar Age', () => {
   let anthony; 
 
   beforeEach(() => {
-    anthony = new SolarAge();
+    anthony = new SolarAge(23);
   });
 
   test('should correctly store and return the user\'s age in earth years', () => {
     anthony.earthYears();
-    expect(anthony.EarthYears).toEqual(23);
+    expect(anthony.EarthAge).toEqual(23);
   });
 
 });
