@@ -8,7 +8,15 @@ $(document).ready(function(){
 
   $("form#age").submit(function(event){
     event.preventDefault();
-    const age = parseInt($("#user-age").val());
+
+    const today = new Date;
+    //const today = todayDate.getFullYear()+'-'+todayDate.getMonth()+'-'+todayDate.getDay();
+    console.log(today);
+    let birthday = new Date;
+    birthday = Date.parse($("#birthday").val());
+    console.log(birthday);
+    const age = Math.floor((today.getTime() - birthday.getTime())/365);
+    console.log(age);
     const user = new SolarAge(age);
 
     user.mercuryYears();
@@ -36,7 +44,7 @@ $(document).ready(function(){
     $("#earth-lifespan").text(`Earth: ${timeleft[0]} earth years`);
     $("#mars-lifespan").text(`Mars: ${timeleft[3]} martian years`);
     $("#jupiter-lifespan").text(`Jupiter: ${timeleft[4]} jovian years`);
-    
+
     $("#next-birthday").text(user.nextBirthday());
   });
 

@@ -1,10 +1,15 @@
 export class SolarAge{
   constructor(age){
+    this.Birthday = [];
     this.EarthAge = age;
     this.MercuryAge = 0;
     this.VenusAge = 0;
     this.MarsAge = 0;
     this.JupiterAge = 0;
+  }
+
+  birthday() {
+    
   }
 
   mercuryYears() {
@@ -31,7 +36,7 @@ export class SolarAge{
     let timeleft = [1, 0.24, 0.62, 1.88, 11.68];
     if (this.EarthAge < lifespan) {
       for (let i = 0; i < timeleft.length; i++){
-      timeleft[i] = ((lifespan-this.EarthAge) / timeleft[i]).toFixed(2); 
+        timeleft[i] = ((lifespan-this.EarthAge) / timeleft[i]).toFixed(2); 
       }
     } else {
       for (let i = 0; i < timeleft.length; i++){
