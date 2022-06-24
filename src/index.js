@@ -10,13 +10,8 @@ $(document).ready(function(){
     event.preventDefault();
 
     const today = new Date;
-    //const today = todayDate.getFullYear()+'-'+todayDate.getMonth()+'-'+todayDate.getDay();
-    console.log(today);
-    let birthday = new Date;
-    birthday = Date.parse($("#birthday").val());
-    console.log(birthday);
-    const age = Math.floor((today.getTime() - birthday.getTime())/365);
-    console.log(age);
+    const birthday = new Date($("#birthday").val());
+    const age = Math.floor((today.getTime() - birthday.getTime())/(365*24*60*60*1000));
     const user = new SolarAge(age);
 
     user.mercuryYears();

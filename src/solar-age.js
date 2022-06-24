@@ -1,15 +1,11 @@
 export class SolarAge{
   constructor(age){
-    this.Birthday = [];
+    this.Birthday = new Date;
     this.EarthAge = age;
     this.MercuryAge = 0;
     this.VenusAge = 0;
     this.MarsAge = 0;
     this.JupiterAge = 0;
-  }
-
-  birthday() {
-    
   }
 
   mercuryYears() {
@@ -47,16 +43,19 @@ export class SolarAge{
   }
 
   nextBirthday() {
-    let planetDays = [this.MercuryAge, this.VenusAge, this.MarsAge, this.JupiterAge];
+    let planetDays = [this.EarthAge, this.EarthAge, this.EarthAge, this.EarthAge];
     const planets = ["Mercury", "Venus", "Mars", "Jupiter"];
     const yearConversion = [0.24, 0.62, 1.88, 11.68];
     for (let i = 0; i < planetDays.length; i++) {
       planetDays[i] = Math.floor((planetDays[i] * yearConversion[i] * 365) % 365);
     }
-    let nextBirthday = `Your next birthday is in ${planetDays[0]} days on ${planets[0]}`;
+    let birthday = Math.floor((this.Birthday.getTime()/(1000*60*60*24))%365);
+    console.log(birthday);
+    let nextBirthday = `Your next birthday is in ${planetDays[0]} Earth days on ${planets[0]}!`;
     for (let i = 1; i < planetDays.length; i++) {
-      if(planetDays[i] < planetDays[i-1]) {
-        nextBirthday = `Your next birthday is in ${planetDays[i]} Earth days on ${planets[i]}!`;
+      console.log(planetDays[i]);
+      if(planetDays[i] > birthday && planetDays[i] < planetDays[i-1]) {
+        nextBirthday = `Your next birthday is in ${planetDays[i]-birthday} Earth days on ${planets[i]}!`;
       }
     }
     return nextBirthday;

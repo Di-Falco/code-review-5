@@ -1,39 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1656097396850" clover="3.2.0">
-  <project timestamp="1656097396850" name="All files">
-    <metrics statements="30" coveredstatements="30" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7" elements="41" coveredelements="41" complexity="0" loc="30" ncloc="30" packages="1" files="1" classes="1"/>
+<coverage generated="1656104088554" clover="3.2.0">
+  <project timestamp="1656104088554" name="All files">
+    <metrics statements="34" coveredstatements="33" conditionals="6" coveredconditionals="5" methods="7" coveredmethods="7" elements="47" coveredelements="45" complexity="0" loc="34" ncloc="34" packages="1" files="1" classes="1"/>
     <file name="solar-age.js" path="/Users/difalcoa/Desktop/epicodus/code-review-5/src/solar-age.js">
-      <metrics statements="30" coveredstatements="30" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
+      <metrics statements="34" coveredstatements="33" conditionals="6" coveredconditionals="5" methods="7" coveredmethods="7"/>
       <line num="3" count="9" type="stmt"/>
       <line num="4" count="9" type="stmt"/>
       <line num="5" count="9" type="stmt"/>
       <line num="6" count="9" type="stmt"/>
       <line num="7" count="9" type="stmt"/>
-      <line num="11" count="2" type="stmt"/>
+      <line num="8" count="9" type="stmt"/>
       <line num="12" count="2" type="stmt"/>
-      <line num="16" count="2" type="stmt"/>
+      <line num="13" count="2" type="stmt"/>
       <line num="17" count="2" type="stmt"/>
-      <line num="21" count="2" type="stmt"/>
+      <line num="18" count="2" type="stmt"/>
       <line num="22" count="2" type="stmt"/>
-      <line num="26" count="2" type="stmt"/>
+      <line num="23" count="2" type="stmt"/>
       <line num="27" count="2" type="stmt"/>
-      <line num="31" count="2" type="stmt"/>
-      <line num="32" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="33" count="1" type="stmt"/>
-      <line num="34" count="5" type="stmt"/>
-      <line num="37" count="1" type="stmt"/>
-      <line num="38" count="5" type="stmt"/>
-      <line num="41" count="2" type="stmt"/>
-      <line num="45" count="1" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="32" count="2" type="stmt"/>
+      <line num="33" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="34" count="1" type="stmt"/>
+      <line num="35" count="5" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
+      <line num="39" count="5" type="stmt"/>
+      <line num="42" count="2" type="stmt"/>
       <line num="46" count="1" type="stmt"/>
       <line num="47" count="1" type="stmt"/>
       <line num="48" count="1" type="stmt"/>
-      <line num="49" count="4" type="stmt"/>
-      <line num="51" count="1" type="stmt"/>
+      <line num="49" count="1" type="stmt"/>
+      <line num="50" count="4" type="stmt"/>
       <line num="52" count="1" type="stmt"/>
-      <line num="53" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="53" count="1" type="stmt"/>
       <line num="54" count="1" type="stmt"/>
-      <line num="57" count="1" type="stmt"/>
+      <line num="55" count="1" type="stmt"/>
+      <line num="56" count="3" type="stmt"/>
+      <line num="57" count="3" type="cond" truecount="3" falsecount="1"/>
+      <line num="58" count="0" type="stmt"/>
+      <line num="61" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
