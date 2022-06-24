@@ -51,7 +51,7 @@ export class SolarAge{
     let nextBirthday = `Your next birthday is in ${planetDays[0]} days on ${planets[0]}`;
     for (let i = 1; i < planetDays.length; i++) {
       if(planetDays[i] < planetDays[i-1]) {
-        nextBirthday = `Your next birthday is in ${planetDays[i]} days on ${planets[i]}!`;
+        nextBirthday = `Your next birthday is in ${planetDays[i]} Earth days on ${planets[i]}!`;
       }
     }
     return nextBirthday;
