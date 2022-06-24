@@ -17,4 +17,9 @@ describe ('Solar Age', () => {
     expect(anthony.MercuryAge).toEqual(95);
   });
 
+  test('should correctly store and return the user\'s age in venusian years, rounded down', () => {
+    anthony.venusYears();
+    expect(anthony.VenusAge).toEqual(37);
+  });
+
 });
