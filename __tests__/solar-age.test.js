@@ -41,7 +41,7 @@ describe ('Solar Age', () => {
   test('should return time lived past life expectancy when input age is greater than input lifespan', () => {
     scruffy = new SolarAge(100);
     const lifespan = 79;
-    expect(scruffy.timeLeft(lifespan)).toEqual(['21', '87.50', '33.87', '11.17', '1.80']);
+    expect(scruffy.timeLeft(lifespan)).toEqual(['21.00', '87.50', '33.87', '11.17', '1.80']);
   });
 
 });

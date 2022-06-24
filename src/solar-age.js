@@ -34,7 +34,9 @@ export class SolarAge{
       timeleft[i] = ((lifespan-this.EarthAge) / timeleft[i]).toFixed(2); 
       }
     } else {
-      return timeleft;
+      for (let i = 0; i < timeleft.length; i++){
+        timeleft[i] = ((this.EarthAge-lifespan) / timeleft[i]).toFixed(2); 
+      }
     }
     return timeleft;
   }
