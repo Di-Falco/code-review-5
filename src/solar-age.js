@@ -41,4 +41,8 @@ export class SolarAge{
     return timeleft;
   }
 
+  nextBirthday() {
+    
+  }
+
 }
