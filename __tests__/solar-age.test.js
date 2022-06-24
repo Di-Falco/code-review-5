@@ -32,4 +32,9 @@ describe ('Solar Age', () => {
     expect(anthony.JupiterAge).toEqual(1);
   });
 
+  test('should calculate the remaining lifespan on each planet in the corresponding year value', () => {
+    const lifespan = 79;
+    expect(anthony.timeLeft(lifespan)).toEqual([56, 234, 90, 30, 5]);
+  });
+
 });

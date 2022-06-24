@@ -27,4 +27,10 @@ export class SolarAge{
     this.JupiterAge = Math.floor(this.EarthAge / jupiterYear);
   }
 
+  timeLeft(lifespan) {
+    let timeleft = [];
+
+    return timeleft;
+  }
+
 }
