@@ -2,7 +2,8 @@ import { SolarAge } from '../src/solar-age.js';
 
 describe ('Solar Age', () => {
 
-  let anthony; 
+  let anthony;
+  let scruffy;
 
   beforeEach(() => {
     anthony = new SolarAge(23);
@@ -35,6 +36,12 @@ describe ('Solar Age', () => {
   test('should calculate the remaining lifespan on each planet in the corresponding year value', () => {
     const lifespan = 79;
     expect(anthony.timeLeft(lifespan)).toEqual(['56.00', '233.33', '90.32', '29.79', '4.79']);
+  });
+
+  test('should return time lived past life expectancy when input age is greater than input lifespan', () => {
+    scruffy = new SolarAge(100);
+    const lifespan = 79;
+    expect(scruffy.timeLeft(lifespan)).toEqual(['21', '87.50', '33.87', '11.17', '1.80']);
   });
 
 });
