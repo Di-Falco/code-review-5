@@ -27,4 +27,9 @@ describe ('Solar Age', () => {
     expect(anthony.MarsAge).toEqual(12);
   });
 
+  test('should correctly store and return the user\'s age in jovian years, rounded down', () => {
+    anthony.jupiterYears();
+    expect(anthony.JupiterAge).toEqual(1);
+  });
+
 });

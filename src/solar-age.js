@@ -4,6 +4,7 @@ export class SolarAge{
     this.MercuryAge = 0;
     this.VenusAge = 0;
     this.MarsAge = 0;
+    this.JupiterAge = 0;
   }
 
   mercuryYears() {
@@ -19,6 +20,10 @@ export class SolarAge{
   marsYears() {
     const marsYear = 1.88;
     this.MarsAge = Math.floor(this.EarthAge / marsYear);
+  }
+
+  jupiterYears() {
+
   }
 
 }
