@@ -4,12 +4,9 @@ export class SolarAge{
     this.MercuryAge = 0;
   }
 
-  earthYears() {
-    return this.EarthAge;
-  }
-
   mercuryYears() {
-    return this.MercuryAge;
+    const mercuryYear = 0.24;
+    this.MercuryAge = Math.floor(this.EarthAge / mercuryYear);
   }
 
 }

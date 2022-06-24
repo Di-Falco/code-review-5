@@ -9,7 +9,6 @@ describe ('Solar Age', () => {
   });
 
   test('should correctly store and return the user\'s age in earth years', () => {
-    anthony.earthYears();
     expect(anthony.EarthAge).toEqual(23);
   });
 
