@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">97.62% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>41/42</span>
+                <span class='fraction'>38/38</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.67% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/6</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">97.37% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>37/38</span>
+                <span class='fraction'>34/34</span>
             </div>
         
             
@@ -121,9 +121,7 @@
 <a name='L63'></a><a href='#L63'>63</a>
 <a name='L64'></a><a href='#L64'>64</a>
 <a name='L65'></a><a href='#L65'>65</a>
-<a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a>
-<a name='L68'></a><a href='#L68'>68</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L66'></a><a href='#L66'>66</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-yes">9x</span>
@@ -172,23 +170,21 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">150x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export class SolarAge{
   constructor(age, birthday){
@@ -216,12 +212,12 @@
   }
 &nbsp;
   jupiterYears() {
-    const jupiterYear = 11.68;
+    const jupiterYear = 11.86;
     this.JupiterAge = Math.floor(this.EarthAge / jupiterYear);
   }
 &nbsp;
   timeLeft(lifespan) {
-    let timeleft = [1, 0.24, 0.62, 1.88, 11.68];
+    let timeleft = [1, 0.24, 0.62, 1.88, 11.86];
     if (this.EarthAge &lt; lifespan) {
       for (let i = 0; i &lt; timeleft.length; i++){
         timeleft[i] = ((lifespan-this.EarthAge) / timeleft[i]).toFixed(2); 
@@ -235,28 +231,26 @@
   }
 &nbsp;
   nextBirthday() {
-    let planetDays = [this.EarthAge, this.EarthAge, this.EarthAge, this.EarthAge];
+    let planetDays = [0, 0, 0, 0];
     const planets = ["Mercury", "Venus", "Mars", "Jupiter"];
-    const yearConversion = [0.24, 0.62, 1.88, 11.68];
-    let today = new Date;
+    const yearConversion = [0.241, 0.62, 1.88, 11.86];
+    let today = new Date();
+    let birthday = (today.getTime() - this.Birthday.getTime() - 25200000) / (86400000) / 365;
+    
     for (let i = 0; i &lt; planetDays.length; i++) {
-      planetDays[i] = Math.floor((planetDays[i] * yearConversion[i] * 365) % 365);
-    }
-    today = ((today.getTime() / (1000*60*60*24)) % 365);
-    let birthday = (((this.Birthday.getTime() / (1000*60*60*24)) + 2440587.5) % 365);
-    console.log("TODAY: ", today);
-    console.log("BIRTHDAY: ", birthday);
-    console.log("THIS.BIRTHDAY: ", (this.Birthday.getTime() / (1000*60*60*24) + 2440587.5) % 365);
-    console.log("PLANET DAYS: ", planetDays);
-    let nextBirthday = `Your next birthday is in ${planetDays[0]-birthday} Earth days on ${planets[0]}!`;
-    for (let i = 1; i &lt; planetDays.length; i++) {
-      <span class="missing-if-branch" title="if path not taken" >I</span>if(planetDays[i]-birthday &gt; 0 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >planetDays[i]-birthday &lt; planetDays[i-1])</span> {
-<span class="cstat-no" title="statement not covered" >        nextBirthday = `Your next birthday is in ${planetDays[i]-birthday} Earth days on ${planets[i]}!`;</span>
+      while (planetDays[i] &lt; birthday*365){
+        planetDays[i] += Math.round(yearConversion[i]*365);
       }
+      planetDays[i] -= (birthday * 365);
     }
+&nbsp;
+    let nextBirthday = ``;
+    planetDays.sort(function(a, b){return a-b});
+&nbsp;
+      nextBirthday = `Your next birthday is in ${Math.floor(planetDays[0])} Earth days on ${planets[0]}!`;
+    
     return nextBirthday;
   }
-&nbsp;
 }</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -264,7 +258,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Fri Jun 24 2022 15:16:20 GMT-0700 (Pacific Daylight Time)
+                at Sat Jun 25 2022 16:14:55 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="prettify.js"></script>

@@ -29,6 +29,8 @@ The third output is for displaying how long until the user's next birthday, on a
 
 * nextBirthday feature.<br>
  The error seems to be somewhere in the math. It should simply count up from 0, starting at the user's birth date and in increments equal to the number of days it takes for each planet to orbit the sun. The output differs from similar features on other sites.
+ * test 8<br>
+ Since the nextBirthday function changes its output every day, the test for correct output fails each new day. Additionally I'm not sure it even outputs a correct value to begin with, but I am leaving test 8 in for line coverage.
 
 ## License
 

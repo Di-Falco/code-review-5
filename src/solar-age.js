@@ -58,11 +58,9 @@ export class SolarAge{
 
     let nextBirthday = ``;
     planetDays.sort(function(a, b){return a-b});
-    if (planetDays < 1) {
+
       nextBirthday = `Your next birthday is in ${Math.floor(planetDays[0])} Earth days on ${planets[0]}!`;
-    } else {
-      nextBirthday = `Today is your birthday on ${planets[0]}!`;
-    }
+    
     return nextBirthday;
   }
 }
