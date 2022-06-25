@@ -24,12 +24,12 @@ export class SolarAge{
   }
 
   jupiterYears() {
-    const jupiterYear = 11.68;
+    const jupiterYear = 11.86;
     this.JupiterAge = Math.floor(this.EarthAge / jupiterYear);
   }
 
   timeLeft(lifespan) {
-    let timeleft = [1, 0.24, 0.62, 1.88, 11.68];
+    let timeleft = [1, 0.24, 0.62, 1.88, 11.86];
     if (this.EarthAge < lifespan) {
       for (let i = 0; i < timeleft.length; i++){
         timeleft[i] = ((lifespan-this.EarthAge) / timeleft[i]).toFixed(2); 
@@ -43,25 +43,26 @@ export class SolarAge{
   }
 
   nextBirthday() {
-    let planetDays = [this.EarthAge, this.EarthAge, this.EarthAge, this.EarthAge];
+    let planetDays = [0, 0, 0, 0];
     const planets = ["Mercury", "Venus", "Mars", "Jupiter"];
-    const yearConversion = [0.24, 0.62, 1.88, 11.68];
-    let birthday = Math.floor((this.Birthday.getTime() / (86400000)) % 365.24);
+    const yearConversion = [0.241, 0.62, 1.88, 11.86];
+    let today = new Date();
+    let birthday = (today.getTime() - this.Birthday.getTime() - 25200000) / (86400000) / 365;
     
     for (let i = 0; i < planetDays.length; i++) {
-      planetDays[i] = ((Math.ceil(planetDays[i] / yearConversion[i])) - ((planetDays[i]*365.24 + birthday) / yearConversion[i] / 365.24));
+      while (planetDays[i] < birthday*365){
+        planetDays[i] += Math.round(yearConversion[i]*365);
+      }
+      planetDays[i] -= (birthday * 365);
     }
 
-    console.log("BIRTHDAY: ", birthday);
-    console.log("THIS.BIRTHDAY: ", (this.Birthday.getTime() / (86400000)) % 365);
-    console.log("PLANET DAYS: ", planetDays);
-    let nextBirthday = `Your next birthday is in ${planetDays[0]} Earth days on ${planets[0]}!`;
-    for (let i = 1; i < planetDays.length; i++) {
-      if( planetDays[i] < planetDays[i-1]) {
-        nextBirthday = `Your next birthday is in ${planetDays[i]} Earth days on ${planets[i]}!`;
-      }
+    let nextBirthday = ``;
+    planetDays.sort(function(a, b){return a-b});
+    if (planetDays < 1) {
+      nextBirthday = `Your next birthday is in ${Math.floor(planetDays[0])} Earth days on ${planets[0]}!`;
+    } else {
+      nextBirthday = `Today is your birthday on ${planets[0]}!`;
     }
     return nextBirthday;
   }
-
 }
